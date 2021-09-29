@@ -7,7 +7,7 @@ const vm = new Vue({
         name: "liangsuhao",
         myHtml: "<ul><li>我是html测试代码</li></ul>"
     },
-    method: {
+    methods: {
         handle: function(){
             alert(100);
         }

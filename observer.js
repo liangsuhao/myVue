@@ -25,6 +25,7 @@ export default class Observer {
             configurable: true,
             enumerable: true,
             get(){
+                console.log(Dep.target)
                 Dep.target && dep.addSub(Dep.target)  //收集依赖
                 return val;
             },

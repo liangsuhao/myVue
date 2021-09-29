@@ -16,7 +16,7 @@ export default class Dep {
 
     //发送通知
     notify(){
-        this.subs.array.forEach(watcher => {
+        this.subs.forEach(watcher => {
             watcher.update;
         });
     }

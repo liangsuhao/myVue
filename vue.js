@@ -6,7 +6,7 @@ export default class Vue {
     constructor(options = {}){
         this.$options = options;
         this.$data = options.data;
-        this.$methos = options.methos;
+        this.$methods = options.methods;
 
         this.initRootElement(options);
 

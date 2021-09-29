@@ -30,10 +30,10 @@ export default class Complier {
     compileElement(node){
         if(node.attributes.length){
             Array.from(node.attributes).forEach(attr=>{
-                let attrName = attr;
+                let attrName = attr.name;
                 if(this.isDirective(attrName)){
                     attrName = attrName.indexOf(':') > -1 ? attrName.substr(5) : attrName.substr(2); //获取v-后面的值
-                    let key = attr.value;;
+                    let key = attr.value;
                     this.update(node, key, attrName)
                 }
             })
@@ -54,7 +54,7 @@ export default class Complier {
     }
 
     //解析v-model
-    modelUdater(node, value, key){
+    modelUpdater(node, value, key){
         node.value = value;
         new watcher(this.vm, key, (newValue) => {
             node.value = newValue;
