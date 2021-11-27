@@ -9,7 +9,8 @@ const vm = new Vue({
     },
     methods: {
         handle: function(){
-            alert(100);
+            console.log(this)
+            // alert(this.count);
         }
     }
 
